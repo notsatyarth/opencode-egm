@@ -1,0 +1,28 @@
+{
+  "name": "opencode-egm",
+  "version": "0.1.0",
+  "description": "Elephant-Goldfish Model (EGM) for OpenCode v2: skills, slash commands, and an isolated zero-context Goldfish reviewer tool.",
+  "type": "module",
+  "license": "Apache-2.0",
+  "repository": "github:notsatyarth/opencode-egm",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "files": [
+    "src",
+    "content",
+    "LICENSE",
+    "NOTICE.md",
+    "README.md"
+  ],
+  "dependencies": {
+    "@opencode/plugin": "^2.0.24"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "typescript": "^5.6.0"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  }
+}
