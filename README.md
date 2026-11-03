@@ -20,6 +20,6 @@ or `opencode plugin add github:notsatyarth/opencode-egm`.
 ## Design notes
 - v2 plugin API cannot register new agents (agent editor has only update/remove/default), so personas are
   injected as prompts into isolated sessions instead of named subagents. Reviewer runs on the built-in `explore` agent.
-- Status: **experimental. Typechecks, but plugin loading and the goldfish tool are NOT yet verified on OpenCode 2.0.28** (a local load test did not register it; cause unknown). Session-transcript extraction is defensive;
+- Status: **experimental**. Verified on OpenCode 2.0.28 via `opencode plugin add github:notsatyarth/opencode-egm`: the plugin loads, `egm_goldfish` runs in an isolated read-only session with no parent history, and reads outside the workspace are denied. Dropping the directory into `.opencode/plugins/` did not load it; use `plugin add`. Slash commands and skills not yet exercised. Session-transcript extraction is defensive;
   check `egm_goldfish` output first.
 - Update upstream content: re-copy `skills/`, `agents/`, `resources/` from the upstream repo.
